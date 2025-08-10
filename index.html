@@ -3,140 +3,115 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Portfolio of Richard Joseph L. Dela Cruz - Computer Science Student & Aspiring Cybersecurity Analyst.">
   <title>Richard Joseph L. Dela Cruz - Portfolio</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      margin: 0;
-      padding: 0;
-      background-color: #f4f4f4;
-      color: #333;
-    }
-
-    header {
-      background-color: #333;
-      color: #fff;
-      padding: 2rem 1rem;
-      text-align: center;
-    }
-
-    header img {
-      width: 150px;
-      height: 150px;
-      object-fit: cover;
-      border-radius: 50%;
-      border: 4px solid #fff;
-      margin-bottom: 10px;
-    }
-
-    nav {
-      background: #444;
-      padding: 10px;
-      text-align: center;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 15px;
-      font-weight: bold;
-    }
-
-    section {
-      padding: 20px;
-      max-width: 900px;
-      margin: auto;
-      background: white;
-      margin-top: 20px;
-      border-radius: 10px;
-    }
-
-    h1, h2 {
-      color: #333;
-    }
-
-    footer {
-      text-align: center;
-      padding: 10px;
-      background: #333;
-      color: white;
-      margin-top: 20px;
-    }
-
-    ul {
-      list-style-type: square;
-    }
-
-    .project {
-      margin-bottom: 15px;
-    }
-
-    .project-title {
-      font-weight: bold;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
 
-  <header>
-    <img src="RJ.jpg" alt="Photo of Richard Joseph L. Dela Cruz">
-    <h1>Richard Joseph L. Dela Cruz</h1>
-    <p>Computer Science Student | Aspiring Cybersecurity Analyst</p>
-  </header>
-
+  <!-- Fixed Navigation -->
   <nav>
-    <a href="#about">About</a>
-    <a href="#projects">Projects</a>
-    <a href="#skills">Skills</a>
-    <a href="#contact">Contact</a>
+    <div class="nav-container">
+      <a href="#home" class="logo">RJ</a>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
   </nav>
 
+  <!-- Header Section -->
+  <header id="home">
+    <img src="RJ.jpg" alt="Photo of Richard Joseph L. Dela Cruz" class="profile-pic">
+    <h1>Richard Joseph L. Dela Cruz</h1>
+    <p>Computer Science Student | Aspiring Cybersecurity Analyst</p>
+    <a href="Porfolio.pdf" download class="btn">Download Resume</a>
+  </header>
+
+  <!-- About Section -->
   <section id="about">
     <h2>About Me</h2>
     <p>
-      Hi! I'm Richard Joseph L. Dela Cruz, a 3rd-year Computer Science student at the University of Perpetual Help System – Dalta.
-      I'm passionate about cybersecurity, web development, and gamified learning systems. My goal is to use technology to solve real-world problems in innovative ways.
+      Hi! I'm Richard, a 3rd-year Computer Science student at the University of Perpetual Help System – Dalta.
+      I’m passionate about cybersecurity, web development, and gamified learning systems. I aim to use technology to solve real-world problems.
     </p>
   </section>
 
+  <!-- Projects Section -->
   <section id="projects">
     <h2>Projects</h2>
-    <div class="project">
-      <p class="project-title">SCI-HIGH (Educational Roguelike Game)</p>
-      <p>An interactive game designed to teach programming through gamified mechanics and procedural generation.</p>
-    </div>
-    <div class="project">
-      <p class="project-title">Multimodal Navigation for the Visually Impaired</p>
-      <p>A system to aid navigation using audio cues and spatial awareness technologies.</p>
-    </div>
-    <div class="project">
-      <p class="project-title">Customer Feedback Dashboard</p>
-      <p>Data visualization dashboard for analyzing feedback using Python (Plotly Dash).</p>
+    <div class="projects-grid">
+      <!-- SCI-HIGH -->
+      <div class="project-card">
+        <img src="Sci-High.png" alt="SCI-HIGH Game Screenshot" class="project-img">
+        <h3>SCI-HIGH</h3>
+        <p>Educational roguelike game teaching programming through gamified mechanics.</p>
+        <a href="#" target="_blank">View Project</a>
+      </div>
+      <!-- Dog Catalog Website -->
+      <div class="project-card">
+        <img src="Dog catalog.png" alt="Dog Catalog Website Screenshot" class="project-img">
+        <h3>Dog Catalog Website</h3>
+        <p>A pet acting catalog website featuring my dogs with interactive elements.</p>
+        <a href="#" target="_blank">View Project</a>
+      </div>
+      <!-- Buko OS -->
+      <div class="project-card">
+        <h3>Buko OS</h3>
+        <p>A custom OS made using the Cosmo Dev Kit with C#. Includes UI and basic OS functionalities.</p>
+        <a href="https://drive.google.com/file/d/1-AJKnW8Qex3YGq6-jTo4r7bXhfuMA3MJ/view?usp=sharing" target="_blank">Watch Video</a>
+      </div>
+      <!-- Cybersecurity Blog -->
+      <div class="project-card">
+        <h3>Cybersecurity Blog</h3>
+        <p>Personal blog sharing cybersecurity tips and best practices.</p>
+        <a href="#" target="_blank">View Project</a>
+      </div>
     </div>
   </section>
 
+  <!-- Skills Section -->
   <section id="skills">
     <h2>Skills</h2>
     <ul>
       <li>HTML, CSS, JavaScript</li>
-      <li>Python</li>
-      <li>SQL and Database Design</li>
+      <li>Python, Java</li>
+      <li>SQL & Database Design</li>
       <li>Cybersecurity Fundamentals</li>
       <li>Data Visualization</li>
     </ul>
   </section>
 
+  <!-- Contact Section -->
   <section id="contact">
     <h2>Contact</h2>
-    <p>Email: <a href="mailto:rjdelacruz2001@gmail.com">rjdelacruz2001@gmail.com</a></p>
-    <p>Phone: +63 0993 532 6793</p>
-    <p>LinkedIn: <a href="https://linkedin.com/in/richardjosephdelacruz" target="_blank">linkedin.com/in/richardjosephdelacruz</a></p>
+    <p>Email: <a href="mailto:richard.delacruz@email.com">richard.delacruz@email.com</a></p>
+    <p>Phone: +63 900 000 0000</p>
+    <p>
+      <a href="https://linkedin.com/in/richardjosephdelacruz" target="_blank">LinkedIn</a> | 
+      <a href="https://github.com/username" target="_blank">GitHub</a>
+    </p>
   </section>
 
+  <!-- Footer -->
   <footer>
     <p>&copy; 2025 Richard Joseph L. Dela Cruz. All rights reserved.</p>
   </footer>
+
+  <!-- Smooth Scroll Script -->
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
 
 </body>
 </html>
