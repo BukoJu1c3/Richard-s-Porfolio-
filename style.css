@@ -1,0 +1,307 @@
+/* ==== Design tokens ==== */
+:root {
+  --ink: #0d1021;
+  --surface: #131733;
+  --line: #242950;
+  --text: #e8eaf6;
+  --muted: #9aa1c7;
+  --accent: #8b97ff;
+  --accent-strong: #aab3ff;
+  --on-accent: #0d1021;
+  --radius: 8px;
+  --font-display: "Sora", "Segoe UI", sans-serif;
+  --font-body: "DM Sans", "Segoe UI", Arial, sans-serif;
+}
+
+/* ==== Reset ==== */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+
+body {
+  font-family: var(--font-body);
+  line-height: 1.7;
+  color: var(--text);
+  background: var(--ink);
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: var(--accent-strong); }
+
+/* ==== Navigation ==== */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background: rgba(13, 16, 33, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--line);
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1040px;
+  margin: auto;
+  padding: 0.85rem 24px;
+}
+
+.logo {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text);
+  text-decoration: none;
+}
+
+.nav-links a {
+  color: var(--muted);
+  margin-left: 1.75rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-decoration: none;
+  padding-bottom: 4px;
+  border-bottom: 2px solid transparent;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: var(--text);
+  border-color: var(--accent);
+}
+
+/* ==== Header / Hero ==== */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 56px;
+  max-width: 1040px;
+  margin: auto;
+  padding: 150px 24px 88px;
+}
+
+.role {
+  color: var(--accent-strong);
+  font-size: 0.95rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+header h1 {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4.5vw, 3.2rem);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  margin-bottom: 1rem;
+}
+
+.intro {
+  color: var(--muted);
+  font-size: 1.1rem;
+  max-width: 40ch;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 32px;
+}
+
+.profile-pic {
+  flex: none;
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 1px solid var(--line);
+  padding: 6px;
+  background: var(--surface);
+}
+
+/* ==== Buttons ==== */
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: var(--accent);
+  color: var(--on-accent);
+  font-weight: 700;
+  font-size: 0.9rem;
+  border: 1px solid var(--accent);
+  border-radius: var(--radius);
+  text-decoration: none;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.btn:hover {
+  background: var(--accent-strong);
+  border-color: var(--accent-strong);
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--text);
+  border-color: var(--line);
+}
+
+.btn-ghost:hover {
+  background: var(--surface);
+  border-color: var(--accent);
+}
+
+/* ==== Sections: heading column + content column ==== */
+main {
+  max-width: 1040px;
+  margin: auto;
+  padding: 0 24px;
+}
+
+section {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 40px;
+  padding: 56px 0;
+  border-top: 1px solid var(--line);
+}
+
+section h2 {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--text);
+  position: sticky;
+  top: 90px;
+  align-self: start;
+}
+
+#about p {
+  max-width: 62ch;
+  color: var(--muted);
+  font-size: 1.05rem;
+}
+
+/* ==== Projects ==== */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: border-color 0.2s ease;
+}
+
+.project-card:hover { border-color: var(--accent); }
+
+.project-img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  border-bottom: 1px solid var(--line);
+}
+
+.project-body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex: 1;
+  padding: 20px;
+}
+
+.project-body h3 {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  margin-bottom: 6px;
+}
+
+.project-body p {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.project-body .btn {
+  margin-top: auto;
+  padding: 8px 16px;
+  font-size: 0.85rem;
+}
+
+.project-body p + .btn { margin-top: 18px; }
+
+/* ==== Skills ==== */
+#skills ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  list-style: none;
+}
+
+#skills li {
+  border: 1px solid var(--line);
+  background: var(--surface);
+  padding: 6px 14px;
+  border-radius: var(--radius);
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+/* ==== Contact ==== */
+.contact-list > div {
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.contact-list > div:first-child { padding-top: 0; }
+.contact-list > div:last-child { border-bottom: 0; }
+
+.contact-list dt { color: var(--muted); font-size: 0.9rem; }
+
+.contact-list a { text-decoration: none; }
+.contact-list a:hover { text-decoration: underline; }
+
+/* ==== Footer ==== */
+footer {
+  text-align: center;
+  padding: 28px 24px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+/* ==== Focus ==== */
+:focus-visible {
+  outline: 3px solid var(--accent-strong);
+  outline-offset: 3px;
+}
+
+/* ==== Mobile ==== */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    gap: 32px;
+    padding-top: 120px;
+  }
+  .profile-pic { width: 140px; height: 140px; }
+  section { grid-template-columns: 1fr; gap: 20px; padding: 44px 0; }
+  section h2 { position: static; }
+  .nav-links a { margin-left: 1rem; font-size: 0.85rem; }
+  .contact-list > div { grid-template-columns: 80px 1fr; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { transition: none !important; }
+}
